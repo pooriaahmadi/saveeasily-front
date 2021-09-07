@@ -1,0 +1,36 @@
+.home {
+	width: 100%;
+	padding-top: 200px;
+	display: flex;
+	justify-content: center;
+}
+.buttons {
+	display: flex;
+}
+
+.button {
+	cursor: pointer;
+	padding: 10px 20px;
+	background-color: #ff1c5f;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	margin-right: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.button:hover {
+	transform: scale(1.03);
+	transition: 0.5s;
+}
+.text > h1 {
+	margin-bottom: 15px;
+}
+.text > p {
+	margin-bottom: 4px;
+}
+.text > p:last-of-type {
+	margin-bottom: 15px;
+}

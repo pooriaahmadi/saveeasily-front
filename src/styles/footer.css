@@ -1,0 +1,34 @@
+footer {
+	width: 100%;
+	background-color: #151b25;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer .middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer h1 {
+	margin-bottom: 8px;
+}
+
+footer .middle > img {
+	width: 80px;
+	height: 80px;
+}
+footer .links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.links > a {
+	margin-bottom: 7px;
+}
