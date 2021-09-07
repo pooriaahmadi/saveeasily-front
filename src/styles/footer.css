@@ -28,6 +28,13 @@ footer .links {
 	justify-content: center;
 	align-items: center;
 }
+footer > div:last-of-type {
+	display: flex;
+	align-items: center;
+}
+footer .left {
+	margin-right: 20px;
+}
 
 .links > a {
 	margin-bottom: 7px;

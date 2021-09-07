@@ -42,6 +42,9 @@ header .left > .items > .item {
 	padding: 10px;
 	transition: 0.5s;
 }
+header .left > .items > .item.active {
+	color: #ff2c5b;
+}
 header .left > .items > .item:hover {
 	transition: 0.5s;
 	padding: 10px 15px;

@@ -1,6 +1,7 @@
 import "../styles/header.css";
-import logo from "../images/saveeasily.png";
 import { Link } from "react-router-dom";
+import logo from "../images/saveeasily.png";
+import HeaderItem from "./HeaderItem";
 const Header = () => {
 	return (
 		<header className="padding">
@@ -9,15 +10,15 @@ const Header = () => {
 					<img src={logo} alt="" />
 					<h3>Save Easily</h3>
 					<div className="items">
-						<Link className="item" to="/">
+						<HeaderItem className="item" to="/">
 							Home
-						</Link>
-						<Link className="item" to="/">
+						</HeaderItem>
+						<HeaderItem className="item" to="/vote">
 							Vote
-						</Link>
-						<Link className="item" to="/">
+						</HeaderItem>
+						<HeaderItem className="item" to="/support">
 							Support
-						</Link>
+						</HeaderItem>
 					</div>
 				</div>
 				<Link className="right" to="/dashboard">

@@ -19,8 +19,8 @@ function App() {
 				<Route exact path="/">
 					<Home></Home>
 				</Route>
-				<Footer></Footer>
 			</Switch>
+			<Footer></Footer>
 		</Router>
 	);
 }
