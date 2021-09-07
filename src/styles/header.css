@@ -15,6 +15,7 @@ header > div {
 	background-color: #151b25a2;
 	padding: 15px 20px;
 	border-radius: 10px;
+	height: 80px;
 }
 header .right {
 	cursor: pointer;

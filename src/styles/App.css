@@ -35,10 +35,10 @@ a:hover {
 
 @keyframes imageLoading {
 	0% {
-		background-color: rgb(210, 210, 210);
+		background-color: #090c11;
 	}
 	100% {
-		background-color: rgb(100, 100, 100);
+		background-color: #1f242c;
 	}
 }
 

@@ -2,7 +2,9 @@ import "../styles/header.css";
 import { Link } from "react-router-dom";
 import logo from "../images/saveeasily.png";
 import HeaderItem from "./HeaderItem";
-const Header = () => {
+import { HeaderInputs } from "../typings/interfaces";
+import { UserState } from "../typings/enums";
+const Header = (props: HeaderInputs) => {
 	return (
 		<header className="padding">
 			<div>
@@ -21,9 +23,18 @@ const Header = () => {
 						</HeaderItem>
 					</div>
 				</div>
-				<Link className="right" to="/dashboard">
-					<h3>Dashboard</h3>
-				</Link>
+				{!props.userState ? (
+					<a
+						className="right"
+						href="https://discord.com/api/oauth2/authorize?client_id=879048523801317386&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboard%2Freturn&response_type=code&scope=identify%20guilds%20guilds.join"
+					>
+						<h3>Dashboard</h3>
+					</a>
+				) : (
+					<Link className="right" to="/dashboard">
+						<h3>Dashboard</h3>
+					</Link>
+				)}
 			</div>
 		</header>
 	);

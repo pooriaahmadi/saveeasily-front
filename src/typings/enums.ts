@@ -1,4 +1,4 @@
-export enum userStats {
+export enum UserState {
 	guest = 0,
 	loggedIn,
 }
