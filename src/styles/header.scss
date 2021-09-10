@@ -1,0 +1,60 @@
+header {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 20px;
+	width: 100%;
+	> div {
+		backdrop-filter: blur(2px);
+		width: 100%;
+		justify-content: space-between;
+		display: flex;
+		align-items: center;
+		background-color: #151b25a2;
+		padding: 15px 20px;
+		border-radius: 10px;
+		height: 80px;
+	}
+	.right {
+		cursor: pointer;
+		border: 1px solid #ff2c5b;
+		border-radius: 10px;
+		padding: 10px 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 25px;
+			height: 25px;
+			margin-right: 10px;
+			border-radius: 50%;
+		}
+	}
+	.left {
+		height: 100%;
+		align-items: center;
+		display: flex;
+		> img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin-right: 8px;
+		}
+		> .items {
+			margin-left: 20px;
+			> .item {
+				cursor: pointer;
+				padding: 10px;
+				transition: 0.5s;
+				&.active {
+					color: #ff2c5b;
+				}
+				&:hover {
+					transition: 0.5s;
+					padding: 10px 15px;
+				}
+			}
+		}
+	}
+}

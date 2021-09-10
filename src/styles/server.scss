@@ -1,0 +1,30 @@
+.server {
+	transition: 0.5s;
+	filter: invert(0.2);
+	> *:hover {
+		transform: scale(1.1);
+		border-radius: 25%;
+		transition: 0.5s;
+	}
+	&.active {
+		transform: scale(1.1);
+		filter: invert(0);
+		> * {
+			border-radius: 25%;
+		}
+	}
+	> img,
+	div {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		margin-bottom: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		object-fit: cover;
+		object-position: center;
+		font-size: 1vw;
+		transition: 0.5s;
+	}
+}

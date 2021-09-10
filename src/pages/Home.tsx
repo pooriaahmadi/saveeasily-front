@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/home.scss";
 import logo from "../images/saveeasily.png";
 import { Link } from "react-router-dom";
 import { Element, scroller } from "react-scroll";

@@ -1,0 +1,37 @@
+footer {
+	width: 100%;
+	background-color: #151b25;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	.middle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		> img {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	h1 {
+		margin-bottom: 8px;
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		> a {
+			margin-bottom: 7px;
+		}
+	}
+	> div:last-of-type {
+		display: flex;
+		align-items: center;
+	}
+	.left {
+		margin-right: 20px;
+	}
+}

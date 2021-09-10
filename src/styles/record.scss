@@ -1,0 +1,24 @@
+.record {
+	background-color: #1c222b;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	> .left {
+		display: flex;
+	}
+	> .right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		> img {
+			width: 18px;
+			margin-left: 10px;
+		}
+	}
+}
+.id {
+	margin-right: 15px;
+}

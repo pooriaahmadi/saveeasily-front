@@ -1,4 +1,4 @@
-import "../styles/footer.css";
+import "../styles/footer.scss";
 import logo from "../images/saveeasily.png";
 import { Link } from "react-router-dom";
 

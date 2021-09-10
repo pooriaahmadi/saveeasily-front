@@ -1,44 +1,33 @@
-import "../styles/dashboard.css";
-const Dashboard = () => {
+import "../styles/dashboard.scss";
+import Servers from "../components/Servers";
+import UserDashboard from "../components/UserDashboard";
+import { DashboardInputs } from "../typings/interfaces";
+import { useParams } from "react-router";
+import ServerDashboard from "../components/ServerDashboard";
+import { useState } from "react";
+const Dashboard = (props: DashboardInputs) => {
+	props.redirectToLogin();
+	const params = useParams<{
+		mode: string;
+		id: string;
+	}>();
 	return (
 		<div
 			className="padding"
 			style={{ height: window.innerHeight - 20, paddingTop: 120 }}
 		>
 			<div className="dashboard">
-				<div className="servers">
-					<div className="server">
-						<img
-							className="loading"
-							src="https://cdn.discordapp.com/avatars/770212812785844264/e4fd30bfe01b65c3901d7636943b90d2.png?size=64"
-							alt=""
-						/>
-					</div>
-					<div className="server">
-						<img
-							className="loading"
-							src="https://cdn.discordapp.com/avatars/770212812785844264/e4fd30bfe01b65c3901d7636943b90d2.png?size=64"
-							alt=""
-						/>
-					</div>
-					<div className="server">
-						<img
-							className="loading"
-							src="https://cdn.discordapp.com/avatars/770212812785844264/e4fd30bfe01b65c3901d7636943b90d2.png?size=64"
-							alt=""
-						/>
-					</div>
-				</div>
-				<div className="menu">
-					<div className="profile">
-						<img
-							className="loading"
-							src="https://cdn.discordapp.com/avatars/770212812785844264/e4fd30bfe01b65c3901d7636943b90d2.png?size=64"
-							alt=""
-						/>
-						<h3>Regular pooria</h3>
-					</div>
-				</div>
+				<Servers
+					userGuilds={props.userGuilds}
+					token={props.token}
+					backend={props.backend}
+					userObject={props.userObject}
+				></Servers>
+				{params.mode === "user" ? (
+					<UserDashboard {...props} id={params.id}></UserDashboard>
+				) : (
+					<ServerDashboard {...props} id={params.id}></ServerDashboard>
+				)}
 			</div>
 		</div>
 	);
